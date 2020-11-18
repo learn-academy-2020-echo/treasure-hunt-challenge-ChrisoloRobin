@@ -11,8 +11,9 @@ class App extends Component{
   }
 
   handleGamePlay = (index) => {
-    alert ( index )
-
+    const { squares } = this.state
+    squares[ index ] = "🌳"
+    this.setState({ squares: squares })
   }
 
   render(){
