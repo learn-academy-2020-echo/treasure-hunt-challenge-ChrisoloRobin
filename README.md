@@ -9,9 +9,12 @@
                 ** COMPLETE **
 
 - As a user, when I click on one of the question marks an alert appears with the index position of that question mark in the array.
-
+                ** COMPLETE **
 
 - As a user, when I click on one of the question marks instead of the alert the question mark turns into a tree emoji.
+                ** COMPLETE **
+
+
 - As a user, if I select the winning square the question mark will become a treasure emoji.
 - As a user, if I select the losing square the question mark will become a bomb emoji.
 - As a user, I can see a counter that shows how many guesses I have left. The counter starts at 5 and decrements one every time I click on a square that is not the treasure nor the bomb.

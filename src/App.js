@@ -6,17 +6,29 @@ class App extends Component{
   constructor(props){
     super(props)
     this.state = {
-      squares: ["?", "?", "?", "?", "?", "?", "?", "?", "?"]
+      squares: ["?", "?", "?", "?", "?", "?", "?", "?", "?"],
+      treasureLocation: null
     }
   }
 
+  componentDidMount() {
+    let treasure = Math.floor(Math.random() * this.state.squares.length)
+    this.setState({treasureLocation: treasure})
+  }
+
   handleGamePlay = (index) => {
-    const { squares } = this.state
+    const { squares, treasureLocation } = this.state
+    if (index === treasureLocation){
+      squares[index] = "💰"
+      this.setState({ squares: squares })
+    } else {
     squares[ index ] = "🌳"
     this.setState({ squares: squares })
+    }
   }
 
   render(){
+    console.log("treasure:", this.state.treasureLocation)
     return(
       <React.Fragment>
         <h1>Treasure Hunt App</h1>
